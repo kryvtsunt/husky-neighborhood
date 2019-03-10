@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Husky Neighborhood</title>
+
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!------ Include the above in your HEAD tag ---------->
+
+    <!-- Custom styles for this template -->
+    <link href="css/post-event.css" rel="stylesheet">
+
+    <script>
+        function imagePreview(images) {
+            if (images.files && images.files.length > 0) {
+                var fileReader = new FileReader();
+
+                fileReader.onload = function (x) {
+                    document.getElementById('img-preview').setAttribute("src", x.target.result);
+                };
+                fileReader.readAsDataURL(images.files[0])
+            }
+            else{
+                document.getElementById('img-preview').setAttribute("src", "");
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="events.html">Husky Neighborhood</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./events.html">Events
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./organization-profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Log out</a>
+                    </li>
+                    <!-- <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container post-event-container">
+        <div class="row">
+            <div class="col-md-6">
+                <form class="form" action="##" method="post" id="registrationForm">
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <label for="first_name">
+                                <h4>Event Name</h4>
+                            </label>
+                            <input type="text" class="form-control" name="event_name" id="event_name"
+                                placeholder="event name" title="enter the name of the event.">
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <label for="last_name">
+                                <h4>Event Description</h4>
+                            </label>
+                            <textarea class="form-control" placeholder="description"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <label for="email">
+                                <h4>Location</h4>
+                            </label>
+                            <input type="email" class="form-control" id="location" placeholder="somewhere"
+                                title="enter a location">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <label for="phone">
+                                <h4>Tags</h4>
+                            </label>
+                            <input type="text" class="form-control" name="tags" id="tags" placeholder="tags"
+                                title="add tags if any.">
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <div class="col-xs-6">
+                            <label for="mobile">
+                                <h4>Upload Photo</h4>
+                            </label>
+                            <input type="file" onchange="imagePreview(this);" class="form-control" name="img-upload"
+                                id="img-upload">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <img style="width:50%" src="" id="img-preview">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <label for="password">
+                                <h4>Date</h4>
+                            </label>
+                            <div class="row">
+                                <div class="col">
+                                    Starts <input type="date" class="form-control" name="start-date" id="start-date"
+                                        title="enter start date.">
+
+                                </div>
+                                <div class="col">
+                                    Ends <input type="date" class="form-control" name="end-date" id="end-date"
+                                        title="enter end date">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+
+                        <div class="col-xs-6">
+                            <label for="password">
+                                <h4>Time</h4>
+                            </label>
+                            <div class="row">
+                                <div class="col">
+                                    Starts <input type="time" class="form-control" name="start-time" id="start-time"
+                                        title="enter start time.">
+
+                                </div>
+                                <div class="col">
+                                    Ends <input type="time" class="form-control" name="end-time" id="end-time"
+                                        title="enter end time.">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <br>
+                            <button class="btn btn-lg btn-success" type="submit"><i
+                                    class="glyphicon glyphicon-ok-sign"></i> Post</button>
+                            <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i>
+                                Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
