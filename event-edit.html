@@ -51,10 +51,10 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./organization-profile.html">Profile</a>
+                        <a class="nav-link" href="./organization.html">Profile</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./index.html">Log out</a>
+                        <a class="nav-link" href="./login.html">Log out</a>
                     </li>
                     <!-- <li class="nav-item">
             <a class="nav-link" href="#">Contact</a>
@@ -100,14 +100,23 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="">
 
                         <div class="col-xs-6">
-                            <label for="phone">
+
                                 <h4>Tags</h4>
-                            </label>
-                            <input type="text" class="form-control" name="tags" id="tags" placeholder="tags"
-                                title="add tags if any.">
+
+                                <ul class="list-unstyled ">
+                                  <li class="btn badge badge-success"> Free food </li>
+                                  <hr/>
+                                   <li class="btn badge badge-dark"> Books </li>
+                                   <li class="btn badge badge-dark"> Social </li>
+                                   <li class="btn badge badge-dark"> Educational </li>
+                                   <li class="btn badge badge-dark"> Art </li>
+                                   <li class="btn badge badge-dark"> Writing </li>
+                                   <li class="btn badge badge-dark"> Job Opportunity </li>
+
+                                </ul>
                         </div>
                     </div>
 
@@ -119,10 +128,10 @@
                 <form>
                     <div class="form-group">
                         <div class="col-xs-6">
-                            <label for="mobile">
+                            <label for="photo" >
                                 <h4>Upload Photo</h4>
                             </label>
-                            <input type="file" onchange="imagePreview(this);" class="form-control" name="img-upload"
+                            <input type="file" onchange="imagePreview(this);" class="form-control btn" name="img-upload"
                                 id="img-upload">
 
                         </div>
