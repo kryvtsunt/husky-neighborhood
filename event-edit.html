@@ -19,6 +19,29 @@
     <!-- Custom styles for this template -->
     <link href="css/post-event.css" rel="stylesheet">
 
+    <script>
+        function imagePreview(images) {
+            if (images.files && images.files.length > 0) {
+                var fileReader = new FileReader();
+
+                fileReader.onload = function (x) {
+                    document.getElementById('img-preview').setAttribute("src", x.target.result);
+                };
+                fileReader.readAsDataURL(images.files[0])
+            }
+            else {
+                document.getElementById('img-preview').setAttribute("src", "");
+            }
+
+        }
+
+        function postEvent() {
+            alert("Event posted successfully. (This dialog will be removed in future)");
+            location = "events-newevent.html";
+
+            return false;
+        }
+    </script>
 </head>
 
 <body>
@@ -112,7 +135,7 @@
             </div>
 
             <div class="col-md-6">
-                <form>
+                <form onsubmit="return postEvent()">
                     <div class="form-group">
                         <div class="col-xs-6">
                             <label for="photo" >
@@ -211,5 +234,9 @@
     </script>
 </body>
 
+<<<<<<< HEAD
 
 </html>
+=======
+</html>
+>>>>>>> cd24db06a081fc7d9dea35a426146af2f6d235e3

@@ -10,6 +10,28 @@
 
   <title>Husky Neighborhood</title>
 
+  <script type="text/javascript">
+  function changeText2(){
+  var userInput = document.getElementById('userInput').value;
+  document.getElementById('comments').innerHTML += "Me: "+userInput;
+
+  }
+
+  function colorchange(id) {
+
+    var background = document.getElementById(id).style.backgroundColor;
+    if (background == "rgb(255, 145, 0)") {
+        document.getElementById(id).style.background = "rgb(26,255,0)";
+
+          document.getElementById('goingUsers').innerHTML += "Me";
+    } else {
+        document.getElementById(id).style.background = "rgb(255,145,0)";
+        document.getElementById('goingUsers').innerHTML="";
+    }
+
+}
+  </script>
+
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -22,7 +44,7 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <img src="paws.png" width="50px" style="border-radius: 20%; margin-right : 20px">
-      <a class="navbar-brand" href="#">Husky Neighborhood</a>
+      <a class="navbar-brand" href="./events.html">Husky Neighborhood</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -58,7 +80,7 @@
         <!-- Blog Post -->
         <div class="card mb-4">
 
-          <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+          <img class="card-img-top" src="img/book-love.jpeg" alt="Card image cap">
           <div class="card-img-overlay" style="padding:0px;">
            <div class="float-right hidden-md-up rounded"
                 style="background-color: rgb(240, 241, 242)">
@@ -83,26 +105,15 @@
         </div>
 
         <div>
-          <p>Comment 1: Hi my name is user1. </p>
-          <p>Comment 1: Hi my name is user2. </p>
-          <p>Comment 1: Hi my name is user3. </p>
+          <p>User 1: This seems interesting. </p>
+          <p>Ram: Hi I will attend this event. </p>
 
-          <textarea name="comment" >Have an opinion?</textarea>
-        <div>
-          <a href="#" class="btn btn-primary">Post your comment</a>
+          <p> <b id='comments'></b> </p>
+          <input type='text' id='userInput' value='Enter Text Here' />
+         <input type='button' onclick='changeText2()' value='Post a comment'/>
+
+
         </div>
-
-        </div>
-
-        <!-- Pagination -->
-        <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
-          </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
-          </li>
-        </ul>
 
       </div>
 
@@ -113,11 +124,12 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.1272334915802!2d-71.0913603845474!3d42.339810644372825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37a1999cf5ce1%3A0xc97b00e66522b98c!2sNortheastern+University!5e0!3m2!1sen!2sus!4v1552175654390" width="400px" height="400px" frameborder="0" style="border:0" ></iframe>
             <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
             <p></p>
-            <div><h4 class="card-header">Going</h4>
-             <img src="paw2.jpg" width=20px/> User1
-             <img src="paw2.jpg" width=20px/> User2
-             <img src="paw2.jpg" width=20px/> User3
-
+            <div class="card-body">
+             <input type="button" name="Going" value="Going" id="select" onclick="colorchange('select')" style="background:rgb(255,145,0);" />
+             <p><img src="paw2.jpg" width=20px/> User1
+             <p><img src="paw2.jpg" width=20px/> User2
+             <p><img src="paw2.jpg" width=20px/> User3
+             <p> <b id='goingUsers'></b> </p>
             </div>
 
         </div>
