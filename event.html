@@ -13,19 +13,19 @@
   <script type="text/javascript">
   function changeText2(){
   var userInput = document.getElementById('userInput').value;
-  document.getElementById('comments').innerHTML += "Me: "+userInput;
+  document.getElementById('comments').innerHTML += '<img src="img/paw2.jpg" width=20px/>' + "Me: "+ '<br/>';
 
   }
 
   function colorchange(id) {
 
     var background = document.getElementById(id).style.backgroundColor;
-    if (background == "rgb(255, 145, 0)") {
+    if (background == "rgb(255, 185, 0)") {
         document.getElementById(id).style.background = "rgb(26,255,0)";
 
-          document.getElementById('goingUsers').innerHTML += "Me";
+          document.getElementById('goingUsers').innerHTML += '<img src="img/paw2.jpg" width=20px/>' +  "Me";
     } else {
-        document.getElementById(id).style.background = "rgb(255,145,0)";
+        document.getElementById(id).style.background = "rgb(255,185,0)";
         document.getElementById('goingUsers').innerHTML="";
     }
 
@@ -89,7 +89,7 @@
                <!-- <i *ngSwitchCase="false" (click)="bookmark()" class="btn text-warning far fa-bookmark fa-2x"></i> -->
              </div>
              <div  class="text-center">
-               <i class="btn text-danger fa fa-heart fa-2x"></i>
+               <i class="btn text-danger far fa-heart fa-2x"></i>
                <!-- <i *ngSwitchCase="false" (click)="like()" class="btn text-danger far fa-heart fa-2x"></i> -->
              </div>
            </div>
@@ -109,9 +109,10 @@
           <p>Ram: Hi I will attend this event. </p>
 
           <p> <b id='comments'></b> </p>
+          <div class="input-group">
           <input type='text' id='userInput' value='Enter Text Here' />
          <input type='button' onclick='changeText2()' value='Post a comment'/>
-
+       </div>
 
         </div>
 
@@ -125,10 +126,11 @@
             <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
             <p></p>
             <div class="card-body">
-             <input type="button" name="Going" value="Going" id="select" onclick="colorchange('select')" style="background:rgb(255,145,0);" />
-             <p><img src="paw2.jpg" width=20px/> User1
-             <p><img src="paw2.jpg" width=20px/> User2
-             <p><img src="paw2.jpg" width=20px/> User3
+             <input type="button" class="btn btn-block center-block" name="Going" value="Going" id="select" onclick="colorchange('select')" style="background:rgb(255,185,0);" />
+              <br/>
+             <p><img src="img/paw2.jpg" width=20px/> User1
+             <p><img src="img/paw2.jpg" width=20px/> User2
+             <p><img src="img/paw2.jpg" width=20px/> User3
              <p> <b id='goingUsers'></b> </p>
             </div>
 
