@@ -11,19 +11,19 @@
   <title>Husky Neighborhood</title>
 
   <script type="text/javascript">
-  function changeText2(){
+  function buttonColorChange(){
   var userInput = document.getElementById('userInput').value;
-  document.getElementById('comments').innerHTML += '<img src="img/paw2.jpg" width=20px/>' + "Me: "+ '<br/>';
+  document.getElementById('comments').innerHTML += '<img src="paw2.jpg" width=20px/>' + "Me: "+ '<br/>';
 
   }
 
-  function colorchange(id) {
+  function goingButton(id) {
 
     var background = document.getElementById(id).style.backgroundColor;
     if (background == "rgb(255, 185, 0)") {
         document.getElementById(id).style.background = "rgb(26,255,0)";
 
-          document.getElementById('goingUsers').innerHTML += '<img src="img/paw2.jpg" width=20px/>' +  "Me";
+          document.getElementById('goingUsers').innerHTML += '<img src="paw2.jpg" width=20px/>' +  "Me";
     } else {
         document.getElementById(id).style.background = "rgb(255,185,0)";
         document.getElementById('goingUsers').innerHTML="";
@@ -97,7 +97,7 @@
           <div class="card-body">
 
             <h2 class="card-title">Event Name</h2>
-            <p class="card-text">Event details - a paragraph decribing the event.
+            <p class="card-text">Welcome to our book reading session.
             <p> WHERE? Curry Student Center
             <p> WHEN? 12PM, Wednesday, March 9, 2019.
               <!-- <a href="#" class="btn btn-primary">Read More &rarr;</a> -->
@@ -111,7 +111,7 @@
           <p> <b id='comments'></b> </p>
           <div class="input-group">
           <input type='text' class="form-control" id='userInput' value='Enter Text Here' />
-         <input type='button' class="btn btn-primary md-2" onclick='changeText2()' value='Post a comment'/>
+         <input type='button' class="btn btn-primary md-2" onclick='buttonColorChange()' value='Post a comment'/>
        </div>
 
         </div>
@@ -126,11 +126,11 @@
             <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script> -->
             <p></p>
             <div class="card-body">
-             <input type="button" class="btn btn-block center-block" name="Going" value="Going" id="select" onclick="colorchange('select')" style="background:rgb(255,185,0);" />
+             <input type="button" class="btn btn-block center-block" name="Going" value="Going" id="select" onclick="goingButton('select')" style="background:rgb(255,185,0);" />
               <br/>
-             <p><img src="img/paw2.jpg" width=20px/> User1
-             <p><img src="img/paw2.jpg" width=20px/> User2
-             <p><img src="img/paw2.jpg" width=20px/> User3
+             <p><img src="paw2.jpg" width=20px/> User1
+             <p><img src="paw2.jpg" width=20px/> User2
+             <p><img src="paw2.jpg" width=20px/> User3
              <p> <b id='goingUsers'></b> </p>
             </div>
 
