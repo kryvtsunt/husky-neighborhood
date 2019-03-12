@@ -19,29 +19,6 @@
     <!-- Custom styles for this template -->
     <link href="css/post-event.css" rel="stylesheet">
 
-    <script>
-        function imagePreview(images) {
-            if (images.files && images.files.length > 0) {
-                var fileReader = new FileReader();
-
-                fileReader.onload = function (x) {
-                    document.getElementById('img-preview').setAttribute("src", x.target.result);
-                };
-                fileReader.readAsDataURL(images.files[0])
-            }
-            else {
-                document.getElementById('img-preview').setAttribute("src", "");
-            }
-
-        }
-
-        function postEvent() {
-            alert("Event posted successfully. (This dialog will be removed in future)");
-            location = "events-newevent.html";
-
-            return false;
-        }
-    </script>
 </head>
 
 <body>
@@ -136,8 +113,9 @@
 
             <div class="col-md-6">
                 <form onsubmit="return postEvent()">
-                    <div class="form-group">
+
                         <div class="col-xs-6">
+                          <div class="form-group">
                             <label for="photo" >
                                 <h4>Upload Photo</h4>
                             </label>
@@ -196,7 +174,7 @@
                     </div>
                         <br/>
                         <div class="col-xs-12">
-                            <a id="ps" href="./organization.html" class="btn btn-lg btn-success" > Post</a>
+                            <a id="ps" href="./events-newevent.html" class="btn btn-lg btn-success" > Post</a>
                             <button class="btn btn-lg btn-danger"> Reset</button>
                         </div>
                 </form>
@@ -233,10 +211,4 @@
 
     </script>
 </body>
-
-<<<<<<< HEAD
-
 </html>
-=======
-</html>
->>>>>>> cd24db06a081fc7d9dea35a426146af2f6d235e3
